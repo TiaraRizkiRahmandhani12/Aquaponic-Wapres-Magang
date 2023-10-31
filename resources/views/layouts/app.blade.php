@@ -51,7 +51,7 @@
             font-family: sans-serif; /* Mengubah font teks  */
             font-size: 12px; /* Ubah ukuran font sesuai kebutuhan Anda */
             font-weight: bold; /* Membuat teks menjadi bold */
-            margin-bottom: 10px; /* Menambahkan jarak bawah 10px untuk menjatuhkan tulisan "Username" */
+            margin-bottom: 5px; /* Menambahkan jarak bawah 10px untuk menjatuhkan tulisan "Username" */
         }
 
         .password {
@@ -60,7 +60,7 @@
             font-family: sans-serif; /* Mengubah font teks  */
             font-size: 12px; /* Ubah ukuran font sesuai kebutuhan Anda */
             font-weight: bold; /* Membuat teks menjadi bold */
-            margin-bottom: 10px; /* Menambahkan jarak bawah 10px untuk menjatuhkan tulisan "Username" */
+            margin-bottom: 5px; /* Menambahkan jarak bawah 10px untuk menjatuhkan tulisan "Username" */
         }
 
         .input-container-pw {
@@ -75,20 +75,20 @@
 
         .input-box {
             width: 260px;
-            height: 25px;
-            margin-right: 10px;
-            border-radius: 10px; /* Membuat tepi input box melengkung */
+            height: 30px;
+            margin-right: 0px;
+            border-radius: 5px; /* Membuat tepi input box melengkung */
             border: 2px solid #EEEEEE; /* Warna tepi adalah abu-abu (#ccc) dan ketebalannya 2px */
         }
 
         .input-image-user {
-            width: 30px; /* Lebar gambar input ikon */
-            height: 30px; /* Tinggi gambar input ikon */
+            width: 35px; /* Lebar gambar input ikon */
+            height: 35px; /* Tinggi gambar input ikon */
         }
 
         .input-image-pwd {
-            width: 30px; /* Lebar gambar input ikon */
-            height: 30px; /* Tinggi gambar input ikon */
+            width: 35px; /* Lebar gambar input ikon */
+            height: 35px; /* Tinggi gambar input ikon */
         }
 
         .forgot-password {
@@ -116,6 +116,7 @@
             color: white; /* Warna teks tombol */
             font-weight: bold; /* Membuat teks menjadi bold */
             cursor: pointer; /* Mengubah ikon kursor saat diarahkan ke tombol */
+            font-size: 12px; /* Ubah ukuran font sesuai kebutuhan Anda */
         }
 
         .image-or {
@@ -142,10 +143,11 @@
             color: #398EA9; /* Warna teks tombol (#398EA9) */
             font-weight: bold; /* Membuat teks menjadi bold */
             cursor: pointer; /* Mengubah ikon kursor saat diarahkan ke tombol */
+            font-size: 12px; /* Ubah ukuran font sesuai kebutuhan Anda */
         }
 
         .evomo {
-            margin-top: 20px; /* Menambahkan jarak atas antara kotak dan tulisan hak cipta */
+            margin-top: 15px; /* Menambahkan jarak atas antara kotak dan tulisan hak cipta */
         }
 
         .copyright {
@@ -167,7 +169,9 @@
             <img src="/img/iconuser.png" class="input-image-user" alt="Input Icon"> <!-- Ganti '/path/to/your/input_icon.png' dengan path ke gambar ikon input Anda -->
             <input type="text" placeholder="Masukan Username" class="input-box"> <!-- Kotak input untuk username -->
         </div>
-        <p class="password">Password</p>
+        <div class="evomo">
+            <p class="password">Password</p>
+        </div>
         <div class="input-container-pw">
             <img src="/img/iconpwd.png" class="input-image-pwd" alt="Input Icon"> <!-- Ganti '/path/to/your/input_icon.png' dengan path ke gambar ikon input Anda -->
             <input type="text" placeholder="Masukan Password" class="input-box"> <!-- Kotak input untuk username -->
@@ -176,7 +180,10 @@
             <a href="#">Forgot Password?</a>
         </div>
         <div class="login-now">
-            <button class="login-button">Login Now</button>
+            <form method="POST" action="/login">
+            @csrf <!-- Tambahkan token CSRF untuk keamanan -->
+            <button class="login-button" type="submit">Login Now</button>
+            </form>
         </div>
         <div class="image-or">
             <img src="/img/or.png" alt="Image" class="image">
