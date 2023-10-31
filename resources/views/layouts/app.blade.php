@@ -78,7 +78,7 @@
             height: 30px;
             margin-right: 0px;
             border-radius: 5px; /* Membuat tepi input box melengkung */
-            border: 2px solid #EEEEEE; /* Warna tepi adalah abu-abu (#ccc) dan ketebalannya 2px */
+            border: 2px solid #ffffff; /* Warna tepi adalah abu-abu (#ccc) dan ketebalannya 2px */
         }
 
         .input-image-user {
@@ -153,11 +153,6 @@
         .copyright {
             color: #398EA9; /* Memberikan warna teks */
         }
-
-
-
-
-        /* Tambahkan gaya CSS tambahan sesuai kebutuhan Anda */
     </style>
 </head>
 <body>
